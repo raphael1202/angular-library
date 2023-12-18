@@ -13,6 +13,7 @@
     "format:check": "npm run format:check-lib && npm run format:check-showcase",
     "format:check-lib": "prettier --check \"projects/my-lib/**/*.{ts,js,json,html,less}\"",
     "format:check-showcase": "prettier --check \"projects/my-showcase/**/*.{ts,js,json,html,less}\"",
+    "generate:toc": "npx doctoc README.md",
     "serve:ssr:my-showcase": "node dist/my-showcase/server/server.mjs"
   },
   "private": true,
