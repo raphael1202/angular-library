@@ -7,6 +7,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "format:write": "npm run format:write-lib && npm run format:write-showcase",
+    "format:write-lib": "prettier --write \"projects/my-lib/**/*.{ts,js,json,html,less}\"",
+    "format:write-showcase": "prettier --write \"projects/my-showcase/**/*.{ts,js,json,html,less}\"",
+    "format:check": "npm run format:check-lib && npm run format:check-showcase",
+    "format:check-lib": "prettier --check \"projects/my-lib/**/*.{ts,js,json,html,less}\"",
+    "format:check-showcase": "prettier --check \"projects/my-showcase/**/*.{ts,js,json,html,less}\"",
     "serve:ssr:my-showcase": "node dist/my-showcase/server/server.mjs"
   },
   "private": true,
@@ -40,6 +46,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^17.0.0",
+    "prettier": "^3.1.1",
     "typescript": "~5.2.2"
   }
 }
