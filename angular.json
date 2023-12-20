@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-lib": {
+    "my-lib-raphael": {
       "projectType": "library",
-      "root": "projects/my-lib",
-      "sourceRoot": "projects/my-lib/src",
+      "root": "projects/my-lib-raphael",
+      "sourceRoot": "projects/my-lib-raphael/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/my-lib/ng-package.json"
+            "project": "projects/my-lib-raphael/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/my-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/my-lib-raphael/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/my-lib/tsconfig.lib.json"
+              "tsConfig": "projects/my-lib-raphael/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,11 +27,8 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/my-lib/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "tsConfig": "projects/my-lib-raphael/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
       }
@@ -53,18 +50,14 @@
             "outputPath": "dist/my-showcase",
             "index": "projects/my-showcase/src/index.html",
             "browser": "projects/my-showcase/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/my-showcase/tsconfig.app.json",
             "inlineStyleLanguage": "less",
             "assets": [
               "projects/my-showcase/src/favicon.ico",
               "projects/my-showcase/src/assets"
             ],
-            "styles": [
-              "projects/my-showcase/src/styles.less"
-            ],
+            "styles": ["projects/my-showcase/src/styles.less"],
             "scripts": [],
             "server": "projects/my-showcase/src/main.server.ts",
             "prerender": true,
@@ -117,19 +110,14 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/my-showcase/tsconfig.spec.json",
             "inlineStyleLanguage": "less",
             "assets": [
               "projects/my-showcase/src/favicon.ico",
               "projects/my-showcase/src/assets"
             ],
-            "styles": [
-              "projects/my-showcase/src/styles.less"
-            ],
+            "styles": ["projects/my-showcase/src/styles.less"],
             "scripts": []
           }
         }

@@ -13,7 +13,7 @@ This is a demo project that shows how to release a library to npm.
 ## Installation
 
 ```
-npm install my-lib
+npm install my-lib-raphael
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm install my-lib
 ```typescript
 @Component({
   selector: 'my-component',
-  template: ` <my-lib></my-lib> `,
+  template: ` <my-lib-raphael></my-lib-raphael> `,
   imports: [MyLibComponent],
 })
 export class MyComponent {}

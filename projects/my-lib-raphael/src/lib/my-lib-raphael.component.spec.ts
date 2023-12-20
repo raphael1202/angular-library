@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MyLibComponent } from './my-lib.component';
+import { MyLibRaphaelComponent } from './my-lib-raphael.component';
 
 describe('MyLibComponent', () => {
-  let component: MyLibComponent;
-  let fixture: ComponentFixture<MyLibComponent>;
+  let component: MyLibRaphaelComponent;
+  let fixture: ComponentFixture<MyLibRaphaelComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MyLibComponent],
+      imports: [MyLibRaphaelComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MyLibComponent);
+    fixture = TestBed.createComponent(MyLibRaphaelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
