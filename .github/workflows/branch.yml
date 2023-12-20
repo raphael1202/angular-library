@@ -19,6 +19,6 @@ jobs:
       - name: Lint
         run: npm run lint
       - name: Test & Coverage
-        run: npm run test:lib-coverage
+        run: npm run test
       - name: Build
         run: npm run build
