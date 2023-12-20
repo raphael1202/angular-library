@@ -1,13 +1,10 @@
-name: feature-branch
+name: release
 on:
   push:
     branches:
-      - '*'
-      - '*/*'
-      - '**'
-      - '!main'
+      - 'main'
 jobs:
-  CI:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,8 +16,11 @@ jobs:
       - name: Lint
         run: npm run lint
       - name: Test & Coverage
-        run: npm run test
+        run: npm run test:lib
       - name: Build
         run: npm run build
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Release
+        uses: cycjimmy/semantic-release-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
